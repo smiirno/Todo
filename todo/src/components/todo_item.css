@@ -1,0 +1,36 @@
+.todo_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 40px;
+    background-color: #469597;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title h3 {
+    color: #E5E5E5;
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.done_todo {
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+
+.close_btn {
+    color: #DDBEAA;
+    cursor: pointer;
+}
+
+.close_btn:hover {
+    transform: rotate(360deg);
+    transition: 0.3s;
+}
