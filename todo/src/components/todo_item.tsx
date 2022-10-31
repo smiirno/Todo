@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ITodo} from "../interfaces/interfaces";
 import './todo_item.css'
 import {useAppDispatch} from "../store/redux";
@@ -15,7 +15,6 @@ const TodoItem = (props: TodoItemProps) => {
     const dispatch = useAppDispatch()
 
     const checkboxHandler = () => {
-
         dispatch(doneTodo(props.todo))
     }
 
@@ -26,7 +25,7 @@ const TodoItem = (props: TodoItemProps) => {
     return (
         <div className={'todo_item'}>
             <div className={'title'}>
-                <input type={'checkbox'} onClick={checkboxHandler}/>
+                <input type={'checkbox'} onClick={checkboxHandler} defaultChecked={props.todo.isDone}/>
                 <h3 className={props.todo.isDone ? 'done_todo' : ''}>{props.todo.title}</h3>
             </div>
             <CloseOutlinedIcon onClick={removeBtnHandler} className={'close_btn'}/>
