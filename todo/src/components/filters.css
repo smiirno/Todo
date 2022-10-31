@@ -6,11 +6,17 @@
 }
 
 .filter {
+    padding: 10px 15px;
     color: #469597;
     font-size: 15px;
     font-weight: bolder;
-    text-decoration: underline;
-    text-decoration-color: #469597;
+    text-decoration: none;
+}
+
+.active {
+    padding: 9px 14px 10px 14px;
+    border: 1px solid #469597;
+    border-bottom: none;
 }
 
 .filters button {
