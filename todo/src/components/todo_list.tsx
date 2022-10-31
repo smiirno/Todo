@@ -2,7 +2,7 @@ import React from 'react';
 import './todo_list.css'
 import {useAppSelector} from "../store/redux";
 import TodoItem from "./todo_item";
-import {getFilteredTodos} from "../functions/getFilteredTodos";
+import {getFilteredTodos} from "../functions/getFilteredTodos/getFilteredTodos";
 
 type TodoListProps = {
     type: 'all' | 'active' | 'completed'

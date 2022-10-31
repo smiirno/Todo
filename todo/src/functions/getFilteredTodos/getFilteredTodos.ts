@@ -1,6 +1,6 @@
-import {ITodo} from "../interfaces/interfaces";
-import {activeFilter} from "./activeFilter";
-import {completedFilter} from "./completedFilter";
+import {ITodo} from "../../interfaces/interfaces";
+import {activeFilter} from "../activeFilter/activeFilter";
+import {completedFilter} from "../completedFilter/completedFilter";
 
 export function getFilteredTodos (todos: ITodo[], type: 'all' | 'active' | 'completed') {
     let filteredTodos: ITodo[] = []
