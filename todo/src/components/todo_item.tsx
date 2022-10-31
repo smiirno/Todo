@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ITodo} from "../interfaces/interfaces";
 import './todo_item.css'
 import {useAppDispatch} from "../store/redux";

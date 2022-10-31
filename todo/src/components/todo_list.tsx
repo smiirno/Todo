@@ -11,26 +11,7 @@ type TodoListProps = {
 const TodoList = (props: TodoListProps) => {
 
     const {todos} = useAppSelector(state => state.todosReducer)
-    // const [filteredTodos, setFilteredTodos] = useState<ITodo[]>([]);
-
     const filteredTodos = getFilteredTodos(todos, props.type)
-
-    console.log(filteredTodos)
-
-    // useEffect(() => {
-    //     switch (props.type) {
-    //         case "all":
-    //             setFilteredTodos(todos);
-    //             break;
-    //         case "active":
-    //             setFilteredTodos(activeFilter(todos));
-    //             break;
-    //         case "completed":
-    //             setFilteredTodos(completedFilter(todos));
-    //             break;
-    //     }
-    //     console.log(filteredTodos)
-    // }, [props.type])
 
     return (
         <div className={'container'}>

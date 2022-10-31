@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import TodoForm from "./components/todo_form";
 import TodoList from "./components/todo_list";
 import './App.css';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Filters from "./components/filters";
 
 
