@@ -9,6 +9,7 @@ const TodoForm = () => {
     const dispatch = useAppDispatch()
 
     const [currentValue, setCurrentValue] = useState<string>('');
+    const [titleBtn, setTitleBtn] = useState<string>('Добавить');
     const [disableBtn, setDisableBtn] = useState<boolean>(true);
 
     useEffect(() => {
@@ -19,6 +20,11 @@ const TodoForm = () => {
         }
     }, [currentValue])
 
+    useEffect(() => {
+        setTimeout(() => {
+            setTitleBtn('Добавить')
+        }, 500)
+    }, [titleBtn])
 
     const changeHandler = (event:  React.ChangeEvent<HTMLInputElement>) => {
         setCurrentValue(event.currentTarget.value)
@@ -28,13 +34,14 @@ const TodoForm = () => {
         event.preventDefault()
         dispatch(addTodo(currentValue))
         setCurrentValue('')
+        setTitleBtn('Добавлено!')
     }
 
     return (
         <div className={'container'}>
             <form className={' todo_form'} onSubmit={event => submitHandler(event)}>
                 <input type={'text'} onChange={event => changeHandler(event)} value={currentValue} placeholder={'Введите задачу'}/>
-                <button type={'submit'} disabled={disableBtn} className={disableBtn ? 'disabled_btn' : ''}>Добавить</button>
+                <button type={'submit'} disabled={disableBtn} className={disableBtn ? 'disabled_btn' : ''}>{titleBtn}</button>
             </form>
         </div>
     );
