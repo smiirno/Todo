@@ -1,14 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './filters.css'
 import {Link} from "react-router-dom";
 import {useAppDispatch} from "../store/redux";
 import {removeCompletedTodos} from "../store/todos_slice";
 
+
 const Filters = () => {
 
     const dispatch = useAppDispatch()
-
-    const [active, setActive] = useState([]);
 
     document.getElementById('id')
 
